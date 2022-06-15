@@ -16,12 +16,12 @@ for use as comments in whatever language accepts that character as a comment.
 Default Character - #
 Purly stylistic, based on my own preferences. 
 
-Usage: Usage: cmtBlock.py \"YOUR COMMENT\" [character]
+Usage: ./{0} \"YOUR COMMENT\" [character]
 
 Examples:
-{0} \"Surround with the default hash symbol\"
-{0} \"Surround with x's\" x
-{0} \"Surround with special symbol, stars\" \"*\"""".format(
+./{0} \"Surround with the default hash symbol\"
+./{0} \"Surround with x's\" x
+./{0} \"Surround with special symbol, stars\" \"*\"""".format(
             _NAME, _VERS, _AUTHOR
         )
     )
