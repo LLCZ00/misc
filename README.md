@@ -24,3 +24,4 @@ Used to make square 'block' comments in a style of my own personal preference.
 ```
 #### To do/Issues
 1. Expand to accept "languages" as arguments, and use the character of that languages comments.
+2. Might have the output go straight to the user's clipboard
