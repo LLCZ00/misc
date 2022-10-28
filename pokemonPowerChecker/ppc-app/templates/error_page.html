@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='fp.css') }}"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PPC WEB APP</title>
+</head>
+<body>
+
+<h1>Pokemon Power Checker</h1>
+<br>
+<h3>Pokemon not found</h3>
+<br>
+
+<div class = "gfg">
+	<p id="confuse">
+		<img src="{{ url_for('static', filename='confused.png') }}" alt="Bidoof is confused">
+	</p>
+</div>
+
+<br>
+<div class="form-center">
+<form action="/">
+		<input type="submit" value="Back">
+</form>
+</div>
+
+</body>
+</html>

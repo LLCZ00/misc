@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='fp.css') }}"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PPC WEB APP</title>
+</head>
+<body>
+
+<h1>Pokemon Power Checker</h1>
+
+<h2> {{ name }}</h2>
+
+{% block content %}
+	<p>Type(s): </p>
+	<ul>
+	{% for types in ptype %}
+	<li>{{ types }}</li>
+	{% endfor %}
+	</ul>
+	
+	<p>Does 2x damage to: </p>
+	<ul>
+	{% for stat in strong %}
+	<li>{{ stat }}</li>
+	{% endfor %}
+	</ul>
+	
+	<p>Does little damage to: </p>
+	<ul>
+	{% for stat in weak %}
+	<li>{{ stat }}</li>
+	{% endfor %}
+	</ul>
+	
+	<p>Does no damage to: </p>
+	<ul>
+	{% for stat in inv %}
+	<li>{{ stat }}</li>
+	{% endfor %}
+	</ul>
+	
+	<p>Takes 2x damage from:</p>
+	<ul>
+	{% for stat in vuln %}
+	<li>{{ stat }}</li>
+	{% endfor %}
+	
+	</ul>
+{% endblock %}
+
+<br>
+<div class="form-center">
+<form action="/">
+		<input type="submit" value="Back">
+</form>
+</div>
+
+</body>
+</html>

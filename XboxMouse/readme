@@ -1,0 +1,5 @@
+Completely unneccessary, but you can now use your wired xbox controller as a mouse. As far as I've seen this hasn't been done for windows.
+Issues:
+-Coordinates are collected in a list, which gets huge. Need to impliment way to clear coordinates lists without causing input stutters
+-Ranges arnt perfect
+-No way to type. os.system refuses to acknowledge the existence of osk.exe
