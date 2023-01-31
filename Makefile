@@ -5,9 +5,10 @@ SOURCES = $(wildcard src/*.cpp)
 HEADERS = $(wildcard src/*.hpp)
 OBJ = $(SOURCES:.cpp=.o)
 CC = g++
+CCFLAGS = -Wall -Wextra -O2
 
 $(BIN): $(OBJ)
-	$(CC) -o $@ $^
+	$(CC) -o $@ $^ $(CCFLAGS)
 
 %.o: %.cpp $(HEADERS)
 	$(CC) -o $@ -c $<
