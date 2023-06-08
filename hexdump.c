@@ -15,9 +15,9 @@ void hexdump(const uint8_t *buffer, uint32_t buffersize)
 	int8_t rowlength = 16; // Bytes per line
 	int8_t columnsize = 8; // Where to put space between output in each line
 	uint16_t linenumber = 0;
-	uint8_t ascii_chars[rowlength-1]; // Characters for ascii output after each line
+	uint8_t ascii_chars[rowlength]; // Characters for ascii output after each line
 
-	memset(ascii_chars, '.', rowlength-1);
+	memset(ascii_chars, '.', rowlength);
 
 	printf("%04X: ", linenumber);
 
@@ -41,7 +41,7 @@ void hexdump(const uint8_t *buffer, uint32_t buffersize)
 			printf("\t| ");
 
 			// Print ascii representation
-			for (int i = 0; i < rowlength-1; i++)
+			for (int i = 0; i < rowlength; i++)
 			{
 				printf("%c ", ascii_chars[i]);
 			}
@@ -51,7 +51,7 @@ void hexdump(const uint8_t *buffer, uint32_t buffersize)
 			if (offset + 1 != buffersize)
 			{
 				printf("%04X: ", linenumber + (offset + 1));
-				memset(ascii_chars, '.', rowlength-1);
+				memset(ascii_chars, '.', rowlength);
 			}			
 		}
 	}
