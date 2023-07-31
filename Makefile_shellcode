@@ -1,0 +1,23 @@
+.PHONY: clean
+
+EXEC = asmExec
+BIN = scode.bin
+SOURCES = $(wildcard src/*.asm)
+OBJ = $(SOURCES:.asm=.o)
+NASM = nasm
+NASM_FLAGS = -felf32
+LD = ld
+LD_FLAGS = -m elf_i386
+
+
+$(BIN): $(EXEC)
+	@objcopy -O binary -j .text $< $@
+
+$(EXEC): $(OBJ)
+	@$(LD) $(LD_FLAGS) -o $@ $^
+
+%.o: %.asm
+	@$(NASM) $(NASM_FLAGS) -o $@ $<
+
+clean:
+	@rm -f $(EXEC) $(BIN) $(OBJ)
